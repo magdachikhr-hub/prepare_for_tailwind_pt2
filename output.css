@@ -10,6 +10,7 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -170,6 +171,21 @@
   .relative {
     position: relative;
   }
+  .bottom-\[626px\] {
+    bottom: 626px;
+  }
+  .mt-\[6px\] {
+    margin-top: 6px;
+  }
+  .mt-\[8px\] {
+    margin-top: 8px;
+  }
+  .mt-\[9px\] {
+    margin-top: 9px;
+  }
+  .mt-\[12px\] {
+    margin-top: 12px;
+  }
   .mt-\[15px\] {
     margin-top: 15px;
   }
@@ -179,11 +195,32 @@
   .mt-\[96px\] {
     margin-top: 96px;
   }
+  .mb-\[32px\] {
+    margin-bottom: 32px;
+  }
+  .mb-\[96\] {
+    margin-bottom: 96;
+  }
+  .mb-\[96px\] {
+    margin-bottom: 96px;
+  }
+  .mb-\[285px\] {
+    margin-bottom: 285px;
+  }
+  .mb-\[286px\] {
+    margin-bottom: 286px;
+  }
   .flex {
     display: flex;
   }
   .table {
     display: table;
+  }
+  .h-\[3\] {
+    height: 3;
+  }
+  .h-\[56px\] {
+    height: 56px;
   }
   .h-\[96px\] {
     height: 96px;
@@ -194,11 +231,29 @@
   .h-\[320px\] {
     height: 320px;
   }
+  .h-\[379px\] {
+    height: 379px;
+  }
+  .h-\[815px\] {
+    height: 815px;
+  }
   .h-\[1514px\] {
     height: 1514px;
   }
+  .h-\[rounded-\[15px\]\] {
+    height: rounded-[15px];
+  }
   .h-full {
     height: 100%;
+  }
+  .w-\[152\] {
+    width: 152;
+  }
+  .w-\[152px\] {
+    width: 152px;
+  }
+  .w-\[327\] {
+    width: 327;
   }
   .w-\[327px\] {
     width: 327px;
@@ -208,6 +263,10 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .translate-x-\[50\%\] {
+    --tw-translate-x: 50%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -233,15 +292,27 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .rounded-\[8px\] {
+    border-radius: 8px;
+  }
   .rounded-\[15px\] {
     border-radius: 15px;
+  }
+  .rounded-\[327\] {
+    border-radius: 327;
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-\[\#1D1C1E\] {
+    background-color: #1D1C1E;
+  }
   .bg-\[\#E7816B\] {
     background-color: #E7816B;
+  }
+  .bg-\[\#FFFFFF\] {
+    background-color: #FFFFFF;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -261,6 +332,15 @@
   .p-\[30px\] {
     padding: 30px;
   }
+  .pt-\[64px\] {
+    padding-top: 64px;
+  }
+  .pr-\[24px\] {
+    padding-right: 24px;
+  }
+  .pl-\[24px\] {
+    padding-left: 24px;
+  }
   .text-center {
     text-align: center;
   }
@@ -273,21 +353,40 @@
   .text-\[32px\] {
     font-size: 32px;
   }
+  .leading-\[25px\] {
+    --tw-leading: 25px;
+    line-height: 25px;
+  }
   .leading-\[26px\] {
     --tw-leading: 26px;
     line-height: 26px;
+  }
+  .leading-\[36px\] {
+    --tw-leading: 36px;
+    line-height: 36px;
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
   .tracking-\[1\.4px\] {
     --tw-tracking: 1.4px;
     letter-spacing: 1.4px;
   }
+  .tracking-\[1px\] {
+    --tw-tracking: 1px;
+    letter-spacing: 1px;
+  }
   .tracking-\[5px\] {
     --tw-tracking: 5px;
     letter-spacing: 5px;
+  }
+  .text-\[\#333136\] {
+    color: #333136;
   }
   .text-\[\#FFFFFF\] {
     color: #FFFFFF;
@@ -295,12 +394,29 @@
   .text-white {
     color: var(--color-white);
   }
+  .uppercase {
+    text-transform: uppercase;
+  }
   .underline {
     text-decoration-line: underline;
   }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .hover\:bg-black {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-black);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
   }
   .lg\:h-\[252px\] {
     @media (width >= 64rem) {
@@ -403,6 +519,21 @@ div.web {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -428,6 +559,9 @@ div.web {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
