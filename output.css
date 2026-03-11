@@ -480,6 +480,21 @@
       bottom: 321px;
     }
   }
+  .lg\:mb-\[390px\] {
+    @media (width >= 64rem) {
+      margin-bottom: 390px;
+    }
+  }
+  .lg\:mb-\[400px\] {
+    @media (width >= 64rem) {
+      margin-bottom: 400px;
+    }
+  }
+  .lg\:mb-\[px\] {
+    @media (width >= 64rem) {
+      margin-bottom: px;
+    }
+  }
   .lg\:flex {
     @media (width >= 64rem) {
       display: flex;
