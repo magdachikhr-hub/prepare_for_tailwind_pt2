@@ -13,3 +13,15 @@
 .h3_style {
   @apply text-[20px] tracking-[5px] font-medium text-[#E7816B] group-hover:text-white;
 }
+
+div.app {
+  background-image: url(./images/Object.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.web {
+  background-image: url(./images/Bitmap\ \(2\).png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

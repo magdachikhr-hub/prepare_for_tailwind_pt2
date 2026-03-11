@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-medium: 500;
@@ -163,6 +164,12 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
   .mt-\[15px\] {
     margin-top: 15px;
   }
@@ -181,11 +188,17 @@
   .h-\[96px\] {
     height: 96px;
   }
+  .h-\[250px\] {
+    height: 250px;
+  }
   .h-\[320px\] {
     height: 320px;
   }
   .h-\[1514px\] {
     height: 1514px;
+  }
+  .h-full {
+    height: 100%;
   }
   .w-\[327px\] {
     width: 327px;
@@ -195,6 +208,9 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -208,8 +224,17 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .rounded-\[15px\] {
+    border-radius: 15px;
   }
   .border {
     border-style: var(--tw-border-style);
@@ -217,6 +242,21 @@
   }
   .bg-\[\#E7816B\] {
     background-color: #E7816B;
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-black\/40 {
+    background-color: color-mix(in srgb, #000 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 40%, transparent);
+    }
+  }
+  .bg-black\/50 {
+    background-color: color-mix(in srgb, #000 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    }
   }
   .p-\[30px\] {
     padding: 30px;
@@ -227,6 +267,9 @@
   .text-\[15px\] {
     font-size: 15px;
   }
+  .text-\[28px\] {
+    font-size: 28px;
+  }
   .text-\[32px\] {
     font-size: 32px;
   }
@@ -234,8 +277,23 @@
     --tw-leading: 26px;
     line-height: 26px;
   }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .tracking-\[1\.4px\] {
+    --tw-tracking: 1.4px;
+    letter-spacing: 1.4px;
+  }
+  .tracking-\[5px\] {
+    --tw-tracking: 5px;
+    letter-spacing: 5px;
+  }
   .text-\[\#FFFFFF\] {
     color: #FFFFFF;
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
@@ -249,6 +307,21 @@
       height: 252px;
     }
   }
+  .lg\:h-\[308px\] {
+    @media (width >= 64rem) {
+      height: 308px;
+    }
+  }
+  .lg\:h-\[490px\] {
+    @media (width >= 64rem) {
+      height: 490px;
+    }
+  }
+  .lg\:w-\[541px\] {
+    @media (width >= 64rem) {
+      width: 541px;
+    }
+  }
   .lg\:w-\[1111px\] {
     @media (width >= 64rem) {
       width: 1111px;
@@ -259,6 +332,11 @@
       flex-direction: row;
     }
   }
+  .lg\:gap-\[29px\] {
+    @media (width >= 64rem) {
+      gap: 29px;
+    }
+  }
   .lg\:rounded-\[15px\] {
     @media (width >= 64rem) {
       border-radius: 15px;
@@ -267,6 +345,11 @@
   .lg\:text-\[16px\] {
     @media (width >= 64rem) {
       font-size: 16px;
+    }
+  }
+  .lg\:text-\[40px\] {
+    @media (width >= 64rem) {
+      font-size: 40px;
     }
   }
   .lg\:text-\[48px\] {
@@ -310,6 +393,16 @@
     }
   }
 }
+div.app {
+  background-image: url(./images/Object.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.web {
+  background-image: url(./images/Bitmap\ \(2\).png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -319,11 +412,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -332,14 +420,19 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-leading: initial;
-      --tw-outline-style: solid;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-outline-style: solid;
     }
   }
 }
