@@ -12,6 +12,7 @@
     --spacing: 0.25rem;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
+    --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -192,6 +193,12 @@
   .mt-\[16px\] {
     margin-top: 16px;
   }
+  .mt-\[32px\] {
+    margin-top: 32px;
+  }
+  .mt-\[40px\] {
+    margin-top: 40px;
+  }
   .mt-\[96px\] {
     margin-top: 96px;
   }
@@ -295,6 +302,18 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-\[17px\] {
+    gap: 17px;
+  }
+  .gap-\[32px\] {
+    gap: 32px;
+  }
+  .gap-\[40\] {
+    gap: 40;
+  }
+  .gap-\[40px\] {
+    gap: 40px;
+  }
   .rounded-\[8px\] {
     border-radius: 8px;
   }
@@ -307,6 +326,19 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-b-\[\#333234\] {
+    border-bottom-color: #333234;
+  }
+  .border-b-\[white\] {
+    border-bottom-color: white;
+  }
+  .border-b-white {
+    border-bottom-color: var(--color-white);
   }
   .bg-\[\#1D1C1E\] {
     background-color: #1D1C1E;
@@ -344,14 +376,26 @@
   .pr-\[24px\] {
     padding-right: 24px;
   }
+  .pb-\[32px\] {
+    padding-bottom: 32px;
+  }
+  .pl-\[3px\] {
+    padding-left: 3px;
+  }
   .pl-\[24px\] {
     padding-left: 24px;
+  }
+  .pl-\[24pxpx\] {
+    padding-left: 24pxpx;
   }
   .text-center {
     text-align: center;
   }
   .text-\[15px\] {
     font-size: 15px;
+  }
+  .text-\[24px\] {
+    font-size: 24px;
   }
   .text-\[28px\] {
     font-size: 28px;
@@ -370,6 +414,10 @@
   .leading-\[36px\] {
     --tw-leading: 36px;
     line-height: 36px;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -390,6 +438,9 @@
   .tracking-\[5px\] {
     --tw-tracking: 5px;
     letter-spacing: 5px;
+  }
+  .text-\[\#8E8D8E\] {
+    color: #8E8D8E;
   }
   .text-\[\#333136\] {
     color: #333136;
